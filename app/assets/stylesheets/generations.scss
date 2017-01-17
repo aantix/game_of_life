@@ -1,0 +1,18 @@
+@import "bootstrap";
+
+.cell {
+  height: 50px;
+  outline: 1px solid black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.alive{
+    @extend .alert-success;
+  }
+
+  &.dead {
+    @extend .alert-danger;
+  }
+}

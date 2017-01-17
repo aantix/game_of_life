@@ -1,0 +1,11 @@
+<h3>
+  <%= @generation.iteration.ordinalize %> Generation
+</h3>
+
+<h5>
+  Generated on <%= @generation.created_at.to_formatted_s(:long) %>
+</h5>
+
+<%= render partial: 'cell_row', collection: @generation.cells %>
+
+<%= render partial: 'links', locals: { generation: @generation } %>

@@ -1,0 +1,35 @@
+# SQLite
+default: &default
+  adapter: sqlite3
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: db/development.sqlite3
+test:
+  <<: *default
+  database: db/test.sqlite3
+
+production:
+  <<: *default
+  database: db/production.sqlite3
+
+# SQLite
+#default: &default
+#  adapter: mysql2
+#  pool: 5
+#  timeout: 5000
+#  username: root
+#  password:
+#
+#development:
+#  <<: *default
+#  database: game_of_life_development
+#test:
+#  <<: *default
+#  database: game_of_life_test
+#
+#production:
+#  <<: *default
+#  database: game_of_life_production

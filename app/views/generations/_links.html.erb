@@ -1,0 +1,11 @@
+<br/>
+<% if generation.previous %>
+  <%= link_to('View Previous', game_generation_path(generation.game, generation.previous), class: 'btn btn-info') %>
+  &nbsp;|&nbsp;
+<% end %>
+
+<% if generation.next %>
+  <%= link_to('View Next', game_generation_path(generation.game, generation.next), class: 'btn btn-info') %>
+<% else %>
+  <%= link_to('New Generation', game_generations_path(generation.game), method: :post, class: 'btn btn-success') %>
+<% end %>
